@@ -1,0 +1,20 @@
+fastapi
+uvicorn
+python-dotenv
+python-multipart
+aiofiles
+requests
+openai-whisper
+deep-translator
+edge-tts
+pydub
+# Pin transformers 4.x: Coqui XTTS imports legacy transformers APIs removed in v5.
+transformers>=4.46,<5
+sentencepiece
+torch
+torchaudio
+yt-dlp
+# Voice cloning (XTTS v2). [codec] needed for PyTorch 2.9+ audio IO.
+coqui-tts[codec]>=0.24.0
+reportlab
+websockets
