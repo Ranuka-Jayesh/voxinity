@@ -9,7 +9,7 @@ deep-translator
 edge-tts
 pydub
 # Pin transformers 4.x: Coqui XTTS imports legacy transformers APIs removed in v5.
-transformers>=4.46,<5
+transformers>=5.8.1,<6
 sentencepiece
 torch
 torchaudio
