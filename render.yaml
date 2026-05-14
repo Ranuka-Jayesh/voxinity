@@ -1,0 +1,13 @@
+# Optional Render Blueprint: New > Blueprint > paste this file.
+# Set CORS_ORIGINS in the dashboard to your Vercel URL (https://your-app.vercel.app).
+services:
+  - type: web
+    name: voxinity-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile.api
+    dockerContext: .
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: CORS_ORIGINS
+        sync: false

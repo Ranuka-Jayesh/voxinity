@@ -2,6 +2,8 @@ from backend.load_env import load_env
 
 load_env()
 
+import os
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -20,6 +22,26 @@ from backend.utils.logger import get_logger
 
 _main_logger = get_logger("main")
 
+
+def _cors_allow_origins() -> list[str]:
+    """Local dev defaults plus comma-separated CORS_ORIGINS (e.g. your Vercel URL)."""
+    defaults = [
+        "http://localhost:8080",
+        "http://127.0.0.1:8080",
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ]
+    extra = os.getenv("CORS_ORIGINS", "").strip()
+    if not extra:
+        return defaults
+    merged = list(defaults)
+    for origin in extra.split(","):
+        o = origin.strip()
+        if o and o not in merged:
+            merged.append(o)
+    return merged
+
+
 app = FastAPI(title="Voxinity Dubbing Backend", version="0.1.0")
 
 
@@ -35,14 +57,11 @@ async def _configure_ffmpeg_for_pydub() -> None:
             "FFmpeg not configured; dubbing will fail until FFmpeg is installed or FFMPEG_PATH is set: %s",
             exc,
         )
+
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:8080",
-        "http://127.0.0.1:8080",
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-    ],
+    allow_origins=_cors_allow_origins(),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
