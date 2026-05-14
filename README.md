@@ -52,7 +52,7 @@
 | [Deploy](#deploy) | Docker + Vercel |
 | [Scripts](#scripts-reference) | `npm` commands |
 | [GitHub About](#github-about-copy-paste) | Repo card copy-paste |
-| [License](#license) | Add `LICENSE` when ready |
+| [License](#license) | MIT — see `LICENSE` |
 
 ---
 
@@ -206,7 +206,9 @@ Set **`CORS_ORIGINS`** on the API to your **exact** Vercel origin (scheme + host
 
 ## License
 
-Add a **`LICENSE`** file when you choose terms (e.g. MIT).
+This project is licensed under the **MIT License** — see [`LICENSE`](LICENSE).
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
 ---
 
