@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Hero: vector banner (no external JS) -->
-<img src="./docs/readme-hero.svg" alt="Voxinity — video dubbing and translation" width="92%" />
+<img src="public/post.png" alt="Voxinity — video dubbing and translation" width="92%" />
 
 <br/><br/>
 
