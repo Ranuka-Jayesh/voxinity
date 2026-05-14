@@ -1,112 +1,155 @@
 <div align="center">
 
-<h1>🎙️ Voxinity</h1>
+<!-- Hero: vector banner (no external JS) -->
+<img src="./docs/readme-hero.svg" alt="Voxinity — video dubbing and translation" width="92%" />
 
+<br/><br/>
+
+<!-- Skill icons (official skillicons.dev) -->
+<a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=react,vite,typescript,tailwind,python,fastapi,docker&perline=10" alt="React, Vite, TypeScript, Tailwind, Python, FastAPI, Docker" /></a>
+
+<br/><br/>
+
+<!-- Primary actions -->
 <p>
-  <b>Video dubbing & translation</b> — monorepo with a modern web client and a FastAPI + ML pipeline.<br/>
-  <sub>Upload · transcribe · translate · dub · export · optional sign-language flow</sub>
+  <a href="https://github.com/Ranuka-Jayesh/voxinity/issues"><img src="https://img.shields.io/badge/Issues-181717?style=for-the-badge&logo=github&logoColor=white" alt="Issues" /></a>
+  <a href="https://github.com/Ranuka-Jayesh/voxinity.git"><img src="https://img.shields.io/badge/Clone-181717?style=for-the-badge&logo=git&logoColor=white" alt="Clone" /></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT License" /></a>
+  <a href="#quick-start"><img src="https://img.shields.io/badge/Quick_start-38bdf8?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Quick start" /></a>
 </p>
 
+<!-- Stack & stats -->
 <p>
-  <a href="https://vitejs.dev/"><img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" /></a>
-  <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" /></a>
-  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" /></a>
-  <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" /></a>
+  <a href="https://vitejs.dev/"><img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" /></a>
+  <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" /></a>
+  <a href="https://fastapi.tiangolo.com/"><img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" /></a>
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" /></a>
 </p>
 <p>
-  <a href="https://fastapi.tiangolo.com/"><img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" /></a>
-  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" /></a>
-  <a href="https://www.docker.com/"><img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" /></a>
-  <a href="https://render.com/"><img src="https://img.shields.io/badge/Render-000000?style=for-the-badge&logo=render&logoColor=white" alt="Render" /></a>
-  <a href="https://vercel.com/"><img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" /></a>
-</p>
-
-<p>
-  <a href="https://github.com/Ranuka-Jayesh/voxinity/stargazers"><img src="https://img.shields.io/github/stars/Ranuka-Jayesh/voxinity?style=flat&logo=github&color=gold&label=stars" alt="GitHub stars" /></a>
-  <a href="https://github.com/Ranuka-Jayesh/voxinity/network/members"><img src="https://img.shields.io/github/forks/Ranuka-Jayesh/voxinity?style=flat&logo=github&label=forks" alt="GitHub forks" /></a>
+  <a href="https://github.com/Ranuka-Jayesh/voxinity/stargazers"><img src="https://img.shields.io/github/stars/Ranuka-Jayesh/voxinity?style=flat&logo=github&color=gold&label=stars" alt="Stars" /></a>
+  <a href="https://github.com/Ranuka-Jayesh/voxinity/network/members"><img src="https://img.shields.io/github/forks/Ranuka-Jayesh/voxinity?style=flat&logo=github&label=forks" alt="Forks" /></a>
   <img src="https://img.shields.io/badge/PRs-welcome-22c55e?style=flat&logo=github&labelColor=1f2937" alt="PRs welcome" />
 </p>
 
-<p>
-  <a href="https://github.com/Ranuka-Jayesh/voxinity"><b>Repository</b></a>
-  &nbsp;·&nbsp;
-  <a href="https://github.com/Ranuka-Jayesh/voxinity/issues"><b>Issues</b></a>
-  &nbsp;·&nbsp;
-  <a href="https://github.com/Ranuka-Jayesh/voxinity.git"><b>Clone</b></a>
-</p>
-
-<br/>
-
 </div>
 
----
+> [!TIP]
+> **Browse interactively:** use the ▶ sections below to expand only what you need. Diagrams use **Mermaid** (native on GitHub).
 
-## Table of contents
-
-| | |
-|:--|:--|
-| [Highlights](#highlights) | Stack at a glance |
-| [Architecture](#architecture) | Mermaid diagram |
-| [Quick start](#quick-start) | Install & 3-terminal run |
-| [Environment](#environment) | `VITE_API_BASE_URL` & `CORS_ORIGINS` |
-| [Deploy](#deploy) | Docker + Vercel |
-| [Scripts](#scripts-reference) | `npm` commands |
-| [GitHub About](#github-about-copy-paste) | Repo card copy-paste |
-| [License](#license) | MIT — see `LICENSE` |
-
----
-
-## Highlights
-
-| | **Frontend** | **Backend & ML** |
-|:--:|:--|:--|
-| **Stack** | React 18 · Vite 5 · TypeScript · Tailwind · shadcn/ui · React Router | FastAPI · Uvicorn · disk job queue · FFmpeg |
-| **Icons** | ![React](https://img.shields.io/badge/-React-20232A?style=flat-square&logo=react&logoColor=61DAFB) ![Vite](https://img.shields.io/badge/-Vite-646CFF?style=flat-square&logo=vite&logoColor=white) ![TS](https://img.shields.io/badge/-TS-3178C6?style=flat-square&logo=typescript&logoColor=white) ![Tailwind](https://img.shields.io/badge/-Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white) | ![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white) ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white) |
-| **Note** | Client uses `VITE_API_BASE_URL` or falls back to **`:8000`** on the same host. | Run **`npm run backend:pip`** beside the API so queued dub jobs execute. |
-
----
-
-## Architecture
-
-```mermaid
-flowchart LR
-  subgraph Client["🖥️ Browser"]
-    UI["React + Vite"]
-  end
-  subgraph Server["⚙️ App tier"]
-    API["FastAPI :8000"]
-    W["Pipeline worker"]
-    Q[("Disk job queue")]
-    FS[("uploads / outputs")]
-  end
-  UI -->|"REST · VITE_API_BASE_URL"| API
-  API --> Q
-  W --> Q
-  API --> FS
-  W --> FS
-```
-
-<p align="center"><sub>Rendered on GitHub. In production Docker, API + worker share one filesystem.</sub></p>
-
----
-
-## Quick start
-
-<details open>
-<summary><b>📋 1 · Prerequisites</b></summary>
-
-| | |
-|:--|:--|
-| ![Node](https://img.shields.io/badge/Node-%3E%3D18-339933?style=flat-square&logo=nodedotjs&logoColor=white) | **Node.js** 18+ |
-| ![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=flat-square&logo=python&logoColor=white) | **Python** 3.11+ |
-| ![FFmpeg](https://img.shields.io/badge/FFmpeg-on_PATH-007808?style=flat-square&logo=ffmpeg&logoColor=white) | **FFmpeg** on `PATH` (backend warns if missing) |
+> [!NOTE]
+> **Ports:** UI <kbd>8080</kbd> · API <kbd>8000</kbd> · Set `VITE_API_BASE_URL` on Vercel and `CORS_ORIGINS` on the API for production.
 
 <br/>
+
+---
+
+<details open>
+<summary><b>📑 Table of contents</b> — click to collapse</summary>
+
+| | |
+|:--|:--|
+| [At a glance](#at-a-glance) | One-screen overview |
+| [Architecture](#architecture) | Flow + sequence diagrams |
+| [Quick start](#quick-start) | Checklist + install + 3 terminals |
+| [Environment](#environment) | Env vars cheat sheet |
+| [Deploy](#deploy) | Docker · Vercel · CORS (nested steps) |
+| [Scripts](#scripts) | `npm` reference |
+| [GitHub About](#github-about) | Repo card text |
+| [License](#license) | MIT |
+
+</details>
+
+---
+
+<a id="at-a-glance"></a>
+## ✨ At a glance
+
+| | **What** | **Why it matters** |
+|:--:|--|--|
+| 🎬 | **Dubbing pipeline** | Upload or URL → transcribe → translate → TTS → mux — with optional sign-language path. |
+| 🖥️ | **React + Vite** | SPA on **:8080**, shadcn/ui, React Router, TanStack Query–friendly layout. |
+| ⚡ | **FastAPI** | REST under `/api`, **`/health`**, static **`/outputs`**, CORS-aware for your Vercel URL. |
+| 🤖 | **Worker process** | `npm run backend:pip` drains the **disk queue** next to `main_api` — required for real jobs. |
+
+---
+
+<a id="architecture"></a>
+## 🏗 Architecture
+
+<details open>
+<summary><b>System map</b> (Mermaid · click to collapse)</summary>
+
+```mermaid
+flowchart TB
+  subgraph FE["🌐 Frontend :8080"]
+    R[React + Vite]
+  end
+  subgraph BE["⚡ API :8000"]
+    F[FastAPI / Uvicorn]
+    Q[("Job queue (disk)")]
+  end
+  subgraph ML["🤖 Worker"]
+    P[pipeline_worker]
+  end
+  subgraph FS["📁 Filesystem"]
+    U[(uploads)]
+    O[(outputs)]
+  end
+  R <-->|"REST · VITE_API_BASE_URL"| F
+  F --> Q
+  P --> Q
+  F --> U
+  F --> O
+  P --> U
+  P --> O
+```
 
 </details>
 
 <details>
-<summary><b>📦 2 · Install</b></summary>
+<summary><b>Request flow</b> (sequence — expand to view)</summary>
+
+```mermaid
+sequenceDiagram
+  autonumber
+  actor U as User
+  participant B as Browser
+  participant A as FastAPI
+  participant Q as Disk queue
+  participant W as Worker
+  U->>B: Upload / paste URL
+  B->>A: POST /api/... (dub job)
+  A->>Q: Enqueue payload
+  A-->>B: job_id
+  loop Poll status
+    B->>A: GET status
+    A-->>B: queued / processing / done
+  end
+  Q->>W: Worker claims job
+  W->>W: FFmpeg · ASR · TTS · mux
+  W->>A: Writes outputs
+```
+
+</details>
+
+<p align="center"><sub>Production Docker runs <b>API + worker</b> in one container so they share the same queue and folders.</sub></p>
+
+---
+
+<a id="quick-start"></a>
+## 🚀 Quick start — run locally
+
+> [!IMPORTANT]
+> You need **three** terminals for full dubbing (UI + API + worker). Stop the worker with <kbd>Ctrl</kbd>+<kbd>C</kbd> in its terminal.
+
+### First-time checklist
+
+- [ ] **Node** 18+ and **Python** 3.11+ installed  
+- [ ] **FFmpeg** on your `PATH` (backend logs a warning if it is missing)  
+- [ ] Repo cloned: `git clone https://github.com/Ranuka-Jayesh/voxinity.git`
+
+<details open>
+<summary><b>1 · Install dependencies</b></summary>
 
 ```bash
 npm install
@@ -116,82 +159,104 @@ pip install -r backend/requirements.txt
 </details>
 
 <details>
-<summary><b>🚀 3 · Run (three terminals)</b></summary>
+<summary><b>2 · Open three terminals</b></summary>
 
-| # | Role | Command | Port |
+| Terminal | Role | Command | Port |
 |:--:|--|--|:--:|
 | **A** | 🎨 Frontend | `npm run dev` | **8080** |
 | **B** | ⚡ API | `npm run backend:api` | **8000** |
 | **C** | 🤖 ML worker | `npm run backend:pip` | — |
 
-> **C** is required for dubbing when the API uses external pipeline mode (`backend.main_api`).
+If `VITE_API_BASE_URL` is unset, the client uses **`http://<your-host>:8000`**.
+
+</details>
+
+<details>
+<summary><b>3 · Optional — Windows / PowerShell tips</b></summary>
+
+Use **separate** PowerShell tabs for A / B / C. If `python` is not found, try `py -3.11 -m pip install -r backend/requirements.txt` and `py -3.11 -m uvicorn ...` per your PATH setup.
 
 </details>
 
 ---
 
-## Environment
+<a id="environment"></a>
+## 🔐 Environment
 
-| Variable | Set on | Purpose |
+| Variable | Where | Purpose |
 |:--|:--|:--|
-| `VITE_API_BASE_URL` | Vite / **Vercel** | Public API base URL (no trailing slash). |
-| `CORS_ORIGINS` | **Render** / Docker | Extra allowed browser origins, comma-separated. Localhost stays allowed in code. |
+| `VITE_API_BASE_URL` | Vite · **Vercel** | Public API base URL (**no** trailing slash). |
+| `CORS_ORIGINS` | **Render** / Docker | Extra browser origins, comma-separated. Localhost stays allowed in code. |
 
 ---
 
-## Deploy
+<a id="deploy"></a>
+## ☁️ Deploy
 
 <details>
-<summary><b>🐳 Backend — Docker (e.g. Render)</b></summary>
+<summary><b>🐳 Backend — Docker (Render or similar)</b></summary>
 
-| File | Role |
+<details>
+<summary>What ships in this repo</summary>
+
+| Artifact | Role |
 |:--|:--|
 | `Dockerfile.api` | Python + FFmpeg + `backend/` |
-| `docker-entrypoint.sh` | **Uvicorn** + **`python -m backend.pipeline_worker`** (shared disk queue) |
+| `docker-entrypoint.sh` | Runs **Uvicorn** (`backend.main_api`) **and** `python -m backend.pipeline_worker` on **one** machine |
 
-1. **Render** → Web Service → **Docker** → `Dockerfile.api`
-2. Set **`CORS_ORIGINS`** → e.g. `https://your-app.vercel.app`
-3. Health check path: **`/health`**
-4. Optional: import **`render.yaml`** as a blueprint, then set `CORS_ORIGINS` in the dashboard.
+</details>
 
-> ⏳ First build installs **PyTorch + TTS** — expect a **long** build and a **large** image. Upgrade RAM/CPU if jobs time out.
+<details>
+<summary>Checklist on Render</summary>
+
+- [ ] New **Web Service** → connect **GitHub** → runtime **Docker** → `Dockerfile.api`  
+- [ ] Set **`CORS_ORIGINS`** = your Vercel origin, e.g. `https://your-app.vercel.app`  
+- [ ] Health check path: **`/health`**  
+- [ ] Optional: **Blueprint** from `render.yaml`, then set `CORS_ORIGINS` in the dashboard  
+
+</details>
+
+> [!WARNING]
+> **First Docker build** pulls **PyTorch + TTS** — expect a **long** build, a **large** image, and possible **OOM** on the smallest free tier. Scale RAM/CPU if jobs fail.
 
 </details>
 
 <details>
 <summary><b>▲ Frontend — Vercel</b></summary>
 
-1. New project → import this repo → **Vite** → `npm run build` → output **`dist`**
-2. **`vercel.json`** handles SPA rewrites for React Router
-3. Add **`VITE_API_BASE_URL`** → redeploy
+1. Import repo → **Vite** → `npm run build` → output **`dist`**.  
+2. `vercel.json` already adds **SPA rewrites** for React Router.  
+3. Add **`VITE_API_BASE_URL`**, redeploy.
 
 </details>
 
 <details>
 <summary><b>🔗 Wire CORS</b></summary>
 
-Set **`CORS_ORIGINS`** on the API to your **exact** Vercel origin (scheme + host, no path). Multiple sites: comma-separated list.
+Set **`CORS_ORIGINS`** on the API to the **exact** frontend origin (`https://…`, no path). Multiple origins → comma-separated list.
 
 </details>
 
 ---
 
-## Scripts reference
+<a id="scripts"></a>
+## 📜 Scripts
 
-| Script | |
+| Command | |
 |:--|:--|
 | `npm run dev` | Vite dev server |
 | `npm run build` | Production build → `dist/` |
-| `npm run preview` | Preview production build |
+| `npm run preview` | Preview the production build |
 | `npm run backend:api` | FastAPI (`backend.main_api`) |
 | `npm run backend:pip` | Dub / ML pipeline worker |
 
 ---
 
-## GitHub About (copy-paste)
+<a id="github-about"></a>
+## 📌 GitHub About (copy-paste)
 
 <details>
-<summary><b>📌 Expand</b> — description & topics for the repo “About” card</summary>
+<summary><b>Expand</b> — paste into repo <b>About</b> settings</summary>
 
 **Description (≤350 chars):**
 
@@ -204,11 +269,12 @@ Set **`CORS_ORIGINS`** on the API to your **exact** Vercel origin (scheme + host
 
 ---
 
-## License
+<a id="license"></a>
+## 📄 License
 
-This project is licensed under the **MIT License** — see [`LICENSE`](LICENSE).
+Distributed under the **MIT License**. See [`LICENSE`](LICENSE).
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
 ---
 
@@ -216,8 +282,10 @@ This project is licensed under the **MIT License** — see [`LICENSE`](LICENSE).
 
 <br/>
 
-**Maintainer** · [Ranuka Jayesh](https://github.com/Ranuka-Jayesh) · [voxinity](https://github.com/Ranuka-Jayesh/voxinity)
+**Ranuka Jayesh** · [GitHub](https://github.com/Ranuka-Jayesh) · [**voxinity**](https://github.com/Ranuka-Jayesh/voxinity)
 
-<sub>README tuned for GitHub — badges via <a href="https://shields.io">Shields.io</a> · diagram via Mermaid</sub>
+<br/>
+
+<sub>Banner: vector SVG in-repo · Icons: <a href="https://skillicons.dev">skillicons.dev</a> · Badges: <a href="https://shields.io">shields.io</a> · Diagrams: Mermaid</sub>
 
 </div>
