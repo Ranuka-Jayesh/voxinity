@@ -158,8 +158,7 @@ const Voxinity = () => {
         if (!alive) return;
         setIsAuthenticated(false);
       } finally {
-        if (!alive) return;
-        setAuthChecked(true);
+        if (alive) setAuthChecked(true);
       }
     };
     const onAuthChanged = () => {

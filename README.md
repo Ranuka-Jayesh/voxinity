@@ -28,6 +28,7 @@
 <p>
   <a href="https://github.com/Ranuka-Jayesh/voxinity/stargazers"><img src="https://img.shields.io/github/stars/Ranuka-Jayesh/voxinity?style=flat&logo=github&color=gold&label=stars" alt="Stars" /></a>
   <a href="https://github.com/Ranuka-Jayesh/voxinity/network/members"><img src="https://img.shields.io/github/forks/Ranuka-Jayesh/voxinity?style=flat&logo=github&label=forks" alt="Forks" /></a>
+  <a href="https://github.com/Ranuka-Jayesh/voxinity/actions/workflows/ci.yml"><img src="https://github.com/Ranuka-Jayesh/voxinity/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI status" /></a>
   <img src="https://img.shields.io/badge/PRs-welcome-22c55e?style=flat&logo=github&labelColor=1f2937" alt="PRs welcome" />
 </p>
 
@@ -52,6 +53,7 @@
 | [Architecture](#architecture) | Flow + sequence diagrams |
 | [Quick start](#quick-start) | Checklist + install + 3 terminals |
 | [Environment](#environment) | Env vars cheat sheet |
+| [CI/CD](#ci-cd) | GitHub Actions & Dependabot |
 | [Deploy](#deploy) | Docker · Vercel · CORS (nested steps) |
 | [Scripts](#scripts) | `npm` reference |
 | [GitHub About](#github-about) | Repo card text |
@@ -187,6 +189,22 @@ Use **separate** PowerShell tabs for A / B / C. If `python` is not found, try `p
 |:--|:--|:--|
 | `VITE_API_BASE_URL` | Vite · **Vercel** | Public API base URL (**no** trailing slash). |
 | `CORS_ORIGINS` | **Render** / Docker | Extra browser origins, comma-separated. Localhost stays allowed in code. |
+
+---
+
+<a id="ci-cd"></a>
+## 🔄 CI/CD
+
+> [!TIP]
+> **Branch protection:** In repo **Settings → Branches**, add a rule for `main` and require the **“CI success”** check (and **Frontend** / **Backend** jobs) before merging.
+
+| Workflow | When | What it does |
+|:--|:--|:--|
+| [**`ci.yml`**](.github/workflows/ci.yml) | Every **push** / **PR** to `main` | **Frontend:** `npm ci` → ESLint → Vitest → Vite build; uploads **`dist`** artifact. **Backend:** `python -m compileall` (no PyTorch install). **Gate:** `ci-success` fails if any job fails. |
+| [**`docker-api.yml`**](.github/workflows/docker-api.yml) | **Manual** (“Run workflow”) | Builds **`Dockerfile.api`** with Buildx (long run; optional smoke). |
+| [**`dependabot.yml`**](.github/dependabot.yml) | Weekly / monthly | Opens PRs for **npm**, **pip** (`backend/`), and **GitHub Actions** updates. |
+
+**CD (deploy):** still via **Vercel** + **Render** (or your host) on merge to `main`; CI blocks broken merges before deploy runs.
 
 ---
 
